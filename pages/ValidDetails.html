@@ -98,6 +98,12 @@
                 telephoneError.textContent = "Enter Country code followed by space and 10 digit number";
             }
         });
+        let salary = document.querySelector('#salary');
+        let output = document.querySelector('.salary-output');
+        output.textContent = salary.value;
+        salary.addEventListener('input', function() {
+            output.textContent = salary.value;
+        });
 
 
         function save() {
