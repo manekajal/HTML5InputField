@@ -88,6 +88,18 @@
             }
 
         });
+        let phoneNumberRegex = RegExp("^(\\d{0,9}[\\s]?)?\\d{10}$");
+        let telephone = document.querySelector('#number');
+        let telephoneError = document.querySelector('.number-error');
+        telephone.addEventListener('input', function() {
+            if (phoneNumberRegex.test(telephone.value)) {
+                telephoneError.textContent = "";
+            } else {
+                telephoneError.textContent = "Enter Country code followed by space and 10 digit number";
+            }
+        });
+
+
         function save() {
             alert(" FOrm created Successfully");
         }
